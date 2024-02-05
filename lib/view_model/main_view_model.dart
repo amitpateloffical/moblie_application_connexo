@@ -1,7 +1,8 @@
 import 'package:connexo/routes/app_routes.dart';
-import 'package:connexo/widgets/base_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../base/base_view_model.dart';
 
 class MainViewModel extends BaseViewModel {
   changeRoot(BuildContext context, int index) {

@@ -1,4 +1,4 @@
-import 'package:connexo/widgets/base_view_model.dart';
+import '../base/base.dart';
 
 class DashboardViewModel extends BaseViewModel {
   @override

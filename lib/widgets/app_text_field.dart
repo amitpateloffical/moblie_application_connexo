@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 class AppTextField extends StatelessWidget {
   final String? title;
   final String? hint;
+  final bool menditry;
   final int? lines;
   final Widget? titleWidget;
   final TextEditingController? controller;
@@ -75,6 +75,7 @@ class AppTextField extends StatelessWidget {
     this.prefixText,
     this.editabled,
     this.readOnly = false,
+    this.menditry = false,
     this.padding,
     this.titleColor,
     this.enableCopyPaste = true,
@@ -103,7 +104,16 @@ class AppTextField extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-              )
+              ),
+              const SizedBox(
+                width: 2,
+              ),
+              menditry
+                  ? const Text(
+                      '*',
+                      style: TextStyle(color: Colors.red),
+                    )
+                  : const SizedBox.shrink()
             ],
           ),
           const SizedBox(
@@ -135,13 +145,13 @@ class AppTextField extends StatelessWidget {
                 errorText: errorText,
                 filled: false,
                 errorMaxLines: 2,
-                prefixIcon: prefix ,
+                prefixIcon: prefix,
                 focusedBorder:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                 enabledBorder:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                 border:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                 suffixIconColor: Theme.of(context).colorScheme.primaryContainer,
                 suffixIcon: suffix),
           ),

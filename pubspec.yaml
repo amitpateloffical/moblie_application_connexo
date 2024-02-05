@@ -110,6 +110,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
+    - assets/dummy/amit_guru.jpg
     - assets/dummy/dummy_profile.jpg
     - assets/images/ic_image.png
     - assets/images/ic_profile.png

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'dart:io' if (dart.library.html) 'dart:html';
 
 extension ContextExtension on BuildContext {
   ThemeData get theme => Theme.of(this);
@@ -11,11 +10,9 @@ extension ContextExtension on BuildContext {
 
   // Get the screen width
   double get width => MediaQuery.of(this).size.width;
-   bool get isMobile => MediaQuery.of(this).size.width < 500;
-   bool get isTablet => MediaQuery.of(this).size.width >= 500;
-   bool get isDesktop => MediaQuery.of(this).size.width >= 1100;
-
-
+  bool get isMobile => MediaQuery.of(this).size.width < 500;
+  bool get isTablet => MediaQuery.of(this).size.width >= 500;
+  bool get isDesktop => MediaQuery.of(this).size.width >= 1100;
 
   // Get the screen orientation
   Orientation get orientation => MediaQuery.of(this).orientation;
@@ -36,7 +33,4 @@ extension ContextExtension on BuildContext {
   EdgeInsets get viewInsets => MediaQuery.of(this).viewInsets;
 
   bool get isWeb => kIsWeb;
-
 }
-
-

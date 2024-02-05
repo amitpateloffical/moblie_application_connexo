@@ -2,9 +2,10 @@ import 'package:connexo/view/add_record/record_pages/additional_information_page
 import 'package:connexo/view/add_record/record_pages/change_detail_page.dart';
 import 'package:connexo/view/add_record/record_pages/evaluation_page.dart';
 import 'package:connexo/view/add_record/record_pages/q_a_review_page.dart';
-import 'package:connexo/widgets/base_view_model.dart';
+
 import 'package:flutter/material.dart';
 
+import '../base/base.dart';
 import '../view/add_record/record_pages/general_options_page.dart';
 
 class CreateRecordViewModel extends BaseViewModel {
@@ -24,8 +25,19 @@ class CreateRecordViewModel extends BaseViewModel {
     notifyListeners();
   }
 
+  final List<String> processList = [
+    'Internal Audit',
+    'External Audit',
+    'CAPA',
+    'Audit Program',
+    'Lab Incident',
+    'Risk Assessment',
+    'Root Cause Analysis',
+    'Change Control',
+    'Management Review'
+  ];
   final List<String> options = [
-    'General Options',
+    'General Information',
     'Change Detail',
     'QA Review',
     'Evaluation',
@@ -36,6 +48,7 @@ class CreateRecordViewModel extends BaseViewModel {
     'Change Closure',
     'Activity Log'
   ];
+
   final List<String> siteLocationList = [
     'KSA',
     'Egypt',

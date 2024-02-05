@@ -2,7 +2,7 @@ import 'package:connexo/view/add_record/record_pages/my_chips_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../view_model/create_record_view_model.dart';
-import '../../widgets/base_view.dart';
+import '../../base/base_view.dart';
 
 class CreateRecordView extends BaseView<CreateRecordViewModel> {
   const CreateRecordView({super.key});
@@ -24,9 +24,7 @@ class CreateRecordView extends BaseView<CreateRecordViewModel> {
             child: PageView.builder(
                 itemCount: viewModel.options.length,
                 itemBuilder: (context, index) {
-                  return Center(
-                    child: Text('Page ${viewModel.selectedOptionIndex}.'),
-                  );
+                  return viewModel.pages[viewModel.selectedOptionIndex];
                 }),
           )
         ],

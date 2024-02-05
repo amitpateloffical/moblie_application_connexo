@@ -1,7 +1,7 @@
 import 'package:connexo/helpers/dialog_helper.dart';
 import 'package:connexo/routes/app_routes.dart';
 import 'package:connexo/widgets/app_elevated_button.dart';
-import 'package:connexo/widgets/base_view.dart';
+import 'package:connexo/base/base_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -24,7 +24,7 @@ class AddRecordView extends BaseView<CreateRecordViewModel> {
                 DialogHelper.showToast(message: 'Please select site/location');
                 return;
               }
-              context.push(AppRouter.createRecord);
+              context.push(AppRouter.selectProcess);
             },
             title: 'Select Process',
           ),

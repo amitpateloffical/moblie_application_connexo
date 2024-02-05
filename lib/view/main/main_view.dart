@@ -1,9 +1,8 @@
 import 'package:connexo/view_model/main_view_model.dart';
-import 'package:connexo/widgets/base_view_model.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/base_view.dart';
+import '../../base/base_view.dart';
 
 class MainView extends BaseView<MainViewModel> {
   final Widget child;

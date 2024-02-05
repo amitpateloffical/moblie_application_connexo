@@ -6,6 +6,7 @@
 class AssetsRes {
   static const String PLUGIN_NAME = 'connexo';
   static const String PLUGIN_VERSION = '1.0.0+1';
+  static const String AMIT_GURU = 'assets/dummy/amit_guru.jpg';
   static const String DUMMY_PROFILE = 'assets/dummy/dummy_profile.jpg';
   static const String IC_IMAGE = 'assets/images/ic_image.png';
   static const String IC_PROFILE = 'assets/images/ic_profile.png';

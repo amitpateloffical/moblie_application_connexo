@@ -1,5 +1,6 @@
 import 'package:connexo/view/add_record/add_record_view.dart';
 import 'package:connexo/view/add_record/create_record_view.dart';
+import 'package:connexo/view/add_record/select_process_view.dart';
 import 'package:connexo/view/auth/login_view.dart';
 import 'package:connexo/view/main/analytics_view.dart';
 import 'package:connexo/view/main/dashboard_view.dart';
@@ -33,6 +34,7 @@ class AppRouter {
   static const String analytics = '/analytics';
   static const String settings = '/settings';
   static const String addRecord = '/add_record';
+  static const String selectProcess = '/select_process';
   static const String createRecord = '/create_record';
 
   static const String aboutUs = '/about_us';
@@ -114,6 +116,14 @@ class AppRouter {
         pageBuilder: (context, state) {
           return const NoTransitionPage(
             child: AddRecordView(),
+          );
+        },
+      ),
+      GoRoute(
+        path: selectProcess,
+        pageBuilder: (context, state) {
+          return const NoTransitionPage(
+            child: SelectProcessView(),
           );
         },
       ),

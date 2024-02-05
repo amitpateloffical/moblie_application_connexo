@@ -1,8 +1,7 @@
-import 'package:connexo/widgets/base_view_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../view_model/create_record_view_model.dart';
-import '../../../widgets/base_view.dart';
+import '../../../base/base_view.dart';
 
 class MyChipsWidget extends BaseView<CreateRecordViewModel> {
   const MyChipsWidget({super.key});
